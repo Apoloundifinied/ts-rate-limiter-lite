@@ -1,0 +1,48 @@
+{
+  "name": "ts-rate-limiter-lite",
+  "version": "1.0.0",
+  "description": "Rate limiter leve, framework-agnostic, escrito em TypeScript, com storage em memória via node-cache-lite.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "rate-limit",
+    "rate-limiter",
+    "typescript",
+    "nodejs",
+    "security",
+    "backend",
+    "api",
+    "ddos",
+    "throttling"
+  ],
+  "author": "Robson Developer",
+  "license": "MIT",
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SEU_USUARIO/ts-rate-limiter-lite"
+  },
+  "bugs": {
+    "url": "https://github.com/SEU_USUARIO/ts-rate-limiter-lite/issues"
+  },
+  "homepage": "https://github.com/SEU_USUARIO/ts-rate-limiter-lite#readme",
+  "dependencies": {
+    "node-cache-lite": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0",
+    "eslint": "^8.56.0"
+  }
+}
