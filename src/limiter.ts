@@ -1,10 +1,10 @@
-//Receber config
+
 import { limiterConfig } from './types';
 import { Storage } from './storage/storage';
 import { RateLimiter } from './types';
 import { FixedWindowStrategy } from './strategies/fixedWindow';
 import { SlidingWindowStrategy } from './strategies/slidingWindow';
-//Escolher estratégia
+
 export class RateLimiterFactory {
   static create(
     config: limiterConfig,
