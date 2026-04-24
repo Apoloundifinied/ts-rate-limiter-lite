@@ -1,10 +1,4 @@
-//Janela começa
 
-//Contador sobe
-
-//Se passou do limite → bloqueia
-
-//Quando TTL expira → zera
 import { RateLimitOptions, RateLimitResult, RateLimitState, RateLimiteStorage } from "../types";
 import { Storage } from "../storage/storage";
 export class FixedWindowStrategy {
@@ -13,8 +7,8 @@ export class FixedWindowStrategy {
     private interval: number;
     constructor(options: RateLimitOptions) {
         this.storage = options.storage!;
-        this.maxRequests = options.maxRequests || 100; // padrão 100 requisições
-        this.interval = options.interval || 60000; // padrão 1 minuto
+        this.maxRequests = options.maxRequests || 100;
+        this.interval = options.interval || 60000;
     }
     async isRateLimited(key: string): Promise<RateLimitResult> {
         const now = Date.now();
