@@ -19,7 +19,7 @@ export class MemoryStorage implements RateLimiteStorage {
     value: RateLimitState,
     ttl: number
   ): Promise<void> {
-    // node-cache-lite usa TTL em MILISSEGUNDOS (igual ao seu domínio)
+    // node-cache-lite usa TTL em MILISSEGUNDOS
     this.cache.set(key, value, ttl);
   }
 
