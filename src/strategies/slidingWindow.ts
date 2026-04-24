@@ -1,4 +1,4 @@
-// Quantas requisições nos últimos X segundos?
+
 
 import { RateLimitOptions, RateLimitResult, RateLimitState, RateLimiteStorage } from "../types";
 import { Storage } from "../storage/storage";
@@ -8,8 +8,8 @@ export class SlidingWindowStrategy {
     private interval: number;
     constructor(options: RateLimitOptions) {
         this.storage = options.storage!;
-        this.maxRequests = options.maxRequests || 100; // padrão 100 requisições
-        this.interval = options.interval || 60000; // padrão 1 minuto
+        this.maxRequests = options.maxRequests || 100;
+        this.interval = options.interval || 60000;
     }
     async isRateLimited(key: string): Promise<RateLimitResult> {
         const now = Date.now();
